@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="moxintou.ico" />
+    <title>默心OJ：世界上最好的OJ网站</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        background-color: #eee;
+      }
+      /* * {
+        border: 1px solid black;
+      } */
+      .spbroder {
+        border: 1px solid black;
+      }
+      .flex {
+        display: flex;
+      }
+      .whiteBGC {
+        background-color: white;
+        box-shadow: 3px 2px 2px lightgray;
+      }
+      .flex1 {
+        flex: 1;
+      }
+      .col {
+        flex-direction: column;
+      }
+      .mg8 {
+        margin: 8px;
+      }
+      .mgt8 {
+        margin-top: 8px;
+      }
+      .mgt1 {
+        margin-top: 1px;
+      }
+      .mgr8 {
+        margin-right: 8px;
+      }
+      .imageround {
+        border-radius: 200px;
+        border: 1px solid lightblue;
+      }
+      .betterfont {
+        font-family: "Consolas", 华文中宋, monospace;
+      }
+      .guidance {
+        padding: 10px 20px;
+        border-bottom: 1px solid grey;
+        font-size: 15px;
+        color: rgb(77, 72, 72);
+      }
+      /* 如果屏幕宽度小于600px，下列CSS将会生效 */
+      @media (max-width: 600px) {
+        .sideCol {
+          display: none;
+        }
+        .mainContent {
+          flex-direction: column;
+        }
+        .DataArea {
+          flex-direction: column;
+        }
+        .rightArea {
+          margin-left: 8px;
+        }
+        .DataBlock {
+          margin: 1 1 1px;
+          flex: auto;
+        }
+        .smallerfonts {
+          font-size: 12px;
+        }
+      }
+    </style>
+  </head>
+  <body class="flex">
+    <audio id="muyua" src="muyu.mp3" preload="auto"></audio>
+    <!-- 侧边栏 -->
+    <div style="width: 200px; z-index: 2" class="whiteBGC mgt1 sideCol">
+      <!-- 头像及昵称栏目 -->
+      <div
+        class="flex"
+        style="
+          justify-content: center;
+          align-items: center;
+          border-bottom: 1px solid gray;
+          height: 60px;
+        "
+      >
+        <img
+          src="http://mms0.baidu.com/it/u=349599903,3391843627&fm=253&app=120&f=JPEG&fmt=auto&q=75?w=500&h=500"
+          alt="这里是默心大大的图片来着QAQ,怎么出不来捏嘤嘤嘤qaq?"
+          style="height: 50px; width: 50px"
+          class="imageround"
+        />
+        <!-- 昵称 -->
+        <div class="betterfont" style="font-size: 20px; margin-left: 15px">
+          默心OJ
+        </div>
+      </div>
+      <div class="flex1">
+        <div class="guidance">导航1</div>
+        <div class="guidance">导航2</div>
+        <div class="guidance">导航3</div>
+        <div class="guidance">导航4</div>
+        <div class="guidance">导航5</div>
+      </div>
+    </div>
+    <!-- 主区域 -->
+    <div class="flex1 flex col">
+      <!-- 顶栏 -->
+      <div
+        style="
+          height: 62px;
+          z-index: 1;
+          justify-content: center;
+          align-items: center;
+        "
+        class="whiteBGC flex"
+      >
+        <div
+          style="height: 49px; width: 560px; font-size: 22px"
+          class="betterfont"
+        >
+          由世界上最伟大的Coding大神/*默心*/创造的OnlineJudge网站
+        </div>
+      </div>
+      <!-- 内容区域 -->
+      <div class="flex1 flex mainContent" style="overflow: auto">
+        <!-- 左区域 -->
+        <div style="flex: 3" class="col flex mg8 DataArea">
+          <!-- 数据区 -->
+          <div class="flex">
+            <!-- 四个数据块 -->
+            <div style="height: 100px" class="DataBlock flex1 whiteBGC mgr8">
+              d1
+            </div>
+            <div style="height: 100px" class="DataBlock flex1 whiteBGC mgr8">
+              d2
+            </div>
+            <div style="height: 100px" class="DataBlock flex1 whiteBGC mgr8">
+              d3
+            </div>
+            <div style="height: 100px" class="DataBlock flex1 whiteBGC">d4</div>
+          </div>
+          <!-- 功能区 -->
+          <div class="flex col">
+            <!-- 功能子项 -->
+            <div
+              style="height: 160px; align-items: center"
+              class="whiteBGC mgt8 flex"
+            >
+              <button
+                style="width: 280px; height: 100px; font-size: 18px"
+                class="betterfont"
+                onclick="playaud()"
+              >
+                我说我是一只木鱼你信吗
+              </button>
+              <div class="betterfont">功德数量:</div>
+              <p id="gongde">0</p>
+              <script>
+                var aud = document.getElementById("muyua");
+                var tagGongDe = window.document.getElementById("gongde");
+                function playaud() {
+                  aud.load();
+                  aud.play();
+                  let numGongDe = parseInt(tagGongDe.innerText);
+                  numGongDe++;
+                  tagGongDe.innerText = numGongDe;
+                  return;
+                }
+              </script>
+            </div>
+            <div style="height: 160px" class="whiteBGC mgt8">f2</div>
+            <div style="height: 160px" class="whiteBGC mgt8">f3</div>
+            <div style="height: 160px" class="whiteBGC mgt8">f4</div>
+            <div style="height: 160px" class="whiteBGC mgt8">f5</div>
+          </div>
+        </div>
+        <!-- 右区域 -->
+        <div style="flex: 1" class="col flex rightArea">
+          <!-- 提示区 -->
+          <div style="height: 150px" class="whiteBGC mgt8">
+            荔枝鱼做最好的OJ网站！
+          </div>
+          <!-- 消息区 -->
+          <div
+            style="height: 500px; justify-content: center"
+            class="whiteBGC mgt8 flex"
+          >
+            <!-- 子消息块 -->
+            <div
+              style="
+                display: flex;
+                height: 100px;
+                width: 160px;
+                background-color: lightblue;
+                margin: 8px;
+                padding: 1px;
+              "
+            >
+              <p style="color: red; font-size: 10px">NEW!!!!</p>
+              <p style="font-size: 10px">2023/4/16</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

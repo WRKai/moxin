@@ -1,0 +1,225 @@
+.wrapper {
+  margin: 0 auto;
+  width: 1240px;
+}
+/* 快捷导航区域 */
+.shortcut {
+  height: 52px;
+  background-color: #333;
+}
+.shortcut .wrapper {
+  display: flex;
+  justify-content: flex-end;
+  height: 52px;
+  /* background-color: lightskyblue; */
+}
+.shortcut .wrapper ul {
+  display: flex;
+  line-height: 52px;
+}
+.shortcut .wrapper li a {
+  padding: 0 15px;
+  border-right: 1px solid #999;
+  font-size: 14px;
+  color: white;
+}
+.shortcut .wrapper li:last-child a {
+  border-right: none;
+}
+.shortcut li .icon-mobile-phone {
+  margin-right: 4px;
+  vertical-align: middle;
+  font-size: 20px;
+}
+.shortcut .wrapper ul li .to-login {
+  color: #5eb69c;
+}
+/* header */
+.header {
+  background-color: #fff;
+  padding: 22px 0;
+}
+.header .wrapper {
+  height: 88px;
+  /* background-color: lightskyblue; */
+  display: flex;
+}
+/* logo */
+.header .logo {
+  width: 200px;
+  height: 88px;
+  /* background-color: lightpink; */
+  margin-right: 40px;
+}
+.header .logo a {
+  width: 200px;
+  height: 88px;
+  background-image: url(../images/logo.png);
+  font-size: 0;
+  display: block;
+}
+/* navi */
+.header .navi {
+  margin-top: 33px;
+  margin-right: 28px;
+}
+.header .navi ul {
+  display: flex;
+}
+.header .navi ul li {
+  margin-right: 47px;
+}
+.header .navi ul li a {
+  padding-bottom: 10px;
+  /* background-color: #fff; */
+}
+.header .navi ul li a:hover,
+.header .navi ul li .current {
+  color: #5eb69c;
+  border-bottom: 2px solid #5eb69c;
+}
+/* search */
+.search {
+  display: flex;
+  width: 170px;
+  height: 34px;
+  border-bottom: 2px solid #f4f4f4;
+  margin-top: 33px;
+  margin-right: 45px;
+}
+.search .icon-search {
+  font-size: 19px;
+  color: #ccc;
+  margin-right: 8px;
+}
+.search input::placeholder {
+  font-size: 16px;
+  color: #ccc;
+}
+.search input {
+  font-size: 16px;
+  width: 0; /*令其默认样式清空*/
+  flex: 1;
+}
+/* cart */
+.cart {
+  margin-top: 30px;
+  position: relative;
+  cursor: pointer;
+}
+.cart .icon-cart-full {
+  font-size: 30px;
+}
+.cart i {
+  position: absolute;
+  padding: 0 5px;
+  height: 15px;
+  background-color: #e26237;
+  font-size: 14px;
+  line-height: 15px;
+  border-radius: 8px;
+  color: #fff;
+  left: 20px; /*此处不宜取right，否则其文字向右展开*/
+  top: 3px;
+}
+/* footer */
+.footer {
+  height: 580px;
+  background-color: #f5f5f5;
+}
+/* service */
+.footer .wrapper .service {
+  height: 178px;
+  border-bottom: 2px solid #e8e8e8;
+  padding: 60px 0;
+}
+.footer .wrapper .service ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+.footer .wrapper .service ul li {
+  height: 58px;
+  width: 190px;
+  display: flex;
+}
+.footer .wrapper .service ul li h5 {
+  width: 58px;
+  height: 58px;
+  background-image: url(../images/sprite.png);
+  margin-right: 20px;
+}
+.footer .wrapper .service ul li:nth-child(2) h5 {
+  background-position: 0 -58px;
+}
+.footer .wrapper .service ul li:nth-child(3) h5 {
+  background-position: 0 -116px;
+}
+.footer .wrapper .service ul li:nth-child(4) h5 {
+  background-position: 0 -174px;
+}
+.footer .wrapper .service ul li p {
+  font-size: 28px;
+  line-height: 58px;
+}
+/* helper */
+.footer .wrapper .helper {
+  height: 300px;
+  /* background-color: pink; */
+  display: flex;
+  justify-content: space-around;
+  padding-top: 60px;
+}
+/* left */
+.footer .wrapper .helper .left {
+  display: flex;
+}
+.footer .wrapper .helper .left dl {
+  margin-right: 84px;
+}
+.footer .wrapper .helper .left dl:last-child {
+  margin-right: 0;
+}
+.footer .wrapper .helper .left dt {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+.footer .wrapper .helper .left dd a {
+  font-size: 15px;
+  color: #969696;
+  margin-bottom: 10px;
+}
+.footer .wrapper .helper .left dd a .icon-customer-service {
+  color: #5eb69c;
+}
+/* right */
+.footer .wrapper .helper .right ul {
+  display: flex;
+}
+.footer .wrapper .helper .right ul li:nth-child(1) {
+  margin-right: 55px;
+}
+.footer .wrapper .helper .right ul li .QRCode {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 10px;
+}
+.footer .wrapper .helper .right ul li .QRCode img {
+  width: 120px;
+  height: 120px;
+}
+.footer .wrapper .helper .right ul li p {
+  text-align: center;
+  color: #969696;
+}
+/* copyright */
+.copyright {
+  text-align: center;
+}
+.copyright p {
+  margin-bottom: 10px;
+  color: #aeaeae;
+}
+.copyright p a {
+  margin: 0 10px;
+  color: #aeaeae;
+}
